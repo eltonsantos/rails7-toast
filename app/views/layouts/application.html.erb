@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rails7Toast</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag 'rails_toastify', media: 'all' %>
+    <%= javascript_include_tag 'rails_toastify', 'data-turbo-track': 'reload' %>
+
+    <%= javascript_importmap_tags %>
+
+    <script>
+      window.RailsToastifyConfig = {
+        position: '<%= RailsToastify.configuration.position %>',
+        animation: '<%= RailsToastify.configuration.animation %>',
+        duration: <%= RailsToastify.configuration.duration %>,
+        theme: '<%= RailsToastify.configuration.theme %>',
+        type: '<%= RailsToastify.configuration.type %>'
+      };
+    </script>
+  </head>
+
+  <body>
+    <div id="toast-container" class="toast-container"></div>
+    <main class="container mx-auto mt-28 px-5 flex">
+      <%= yield %>
+    </main>
+  </body>
+</html>
