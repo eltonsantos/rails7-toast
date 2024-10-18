@@ -22,5 +22,28 @@
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>
+
+    <% if notice %>
+      <script>
+        RailsToastify.show('<%= notice %>',
+          { theme: '<%= RailsToastify.configuration.theme %>',
+            type: '<%= RailsToastify.configuration.type %>',
+            animation: '<%= RailsToastify.configuration.animation %>',
+            duration: <%= RailsToastify.configuration.duration %>
+          })
+      </script>
+    <% end %>
+
+    <% if alert %>
+      <script>
+        RailsToastify.show('<%= alert %>',
+          { theme: '<%= RailsToastify.configuration.theme %>',
+            type: '<%= RailsToastify.configuration.type %>',
+            animation: '<%= RailsToastify.configuration.animation %>',
+            duration: <%= RailsToastify.configuration.duration %>
+          })
+      </script>
+    <% end %>
+
   </body>
 </html>

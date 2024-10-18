@@ -1,7 +1,7 @@
 RailsToastify.setup do |configuration|
   configuration.position = 'toast-container-bottom-right'
-  configuration.animation = 'zoom'
-  configuration.duration = 5000
-  configuration.theme = 'dark'
-  configuration.type = 'success'
+  configuration.animation = 'bounce'
+  configuration.duration = 3000
+  configuration.theme = 'light'
+  configuration.type = 'default'
 end
