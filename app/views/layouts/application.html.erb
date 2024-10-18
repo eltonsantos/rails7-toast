@@ -9,24 +9,16 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 
-    <%= stylesheet_link_tag 'rails_toastify', media: 'all' %>
+    <%= stylesheet_link_tag 'rails_toastify', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'rails_toastify', 'data-turbo-track': 'reload' %>
 
     <%= javascript_importmap_tags %>
 
-    <script>
-      window.RailsToastifyConfig = {
-        position: '<%= RailsToastify.configuration.position %>',
-        animation: '<%= RailsToastify.configuration.animation %>',
-        duration: <%= RailsToastify.configuration.duration %>,
-        theme: '<%= RailsToastify.configuration.theme %>',
-        type: '<%= RailsToastify.configuration.type %>'
-      };
-    </script>
   </head>
 
   <body>
-    <div id="toast-container" class="toast-container"></div>
+    <%= rails_toastify_container %>
+    <%= rails_toastify_script %>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>

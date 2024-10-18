@@ -10,8 +10,8 @@
       </ul>
     </div>
     <%= javascript_tag do %>
-        RailsToastify.showToast('<%= notice %>', '<%= RailsToastify.configuration.type %>')
-      <% end %>
+      RailsToastify.show('<%= notice %>', { type: '<%= RailsToastify.config.type %>' })
+    <% end %>
   <% end %>
 
   <div class="my-5">
