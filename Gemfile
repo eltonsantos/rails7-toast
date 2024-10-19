@@ -41,7 +41,9 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-gem "rails_toastify", path: "/home/elton/dev/training-ruby/rails_toastify" # add isso, pois a do rubygem não está atualizada, mude o caminho para onde está na sua máquina
+gem "rails_toastify"
+
+# gem "rails_toastify", path: "/home/elton/dev/training-ruby/rails_toastify" # add isso, pois a do rubygem não está atualizada, mude o caminho para onde está na sua máquina
 # gem "example_gem", path: "/home/elton/dev/training-rails/example_gem"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
