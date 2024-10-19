@@ -1,7 +1,7 @@
 PATH
   remote: /home/elton/dev/training-ruby/rails_toastify
   specs:
-    rails_toastify (1.1.0)
+    rails_toastify (1.1.1)
 
 GEM
   remote: https://rubygems.org/
